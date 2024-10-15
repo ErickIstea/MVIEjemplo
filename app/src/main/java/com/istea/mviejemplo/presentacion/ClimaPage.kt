@@ -1,4 +1,15 @@
 package com.istea.mviejemplo.presentacion
 
-class ClimaPage {
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+
+@Composable
+fun ClimaPage() {
+    val viewModel = ClimaViewModel()
+    ClimaView(
+        modifier = Modifier,
+        estado = viewModel.estado,
+    ) {
+        viewModel.ejecutar(it)
+    }
 }
