@@ -1,4 +1,5 @@
 package com.istea.mviejemplo.presentacion
 
-class ClimaIntencion {
+sealed class ClimaIntencion {
+    data object actualiza: ClimaIntencion()
 }
